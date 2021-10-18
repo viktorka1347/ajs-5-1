@@ -1,3 +1,4 @@
+const types = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
 export default class Character {
     constructor(name, type) {
       if (typeof name !== 'string') {
@@ -9,14 +10,13 @@ export default class Character {
       if (name.length > 10) {
         throw new Error('Слишком длинное имя героя');
       }
-      if (['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'].indexOf(type) === -1) {
+      if (!types.includes(type)) {
         throw new Error('Несуществующий тип героя');
       }
       this.name = name;
       this.type = type;
       this.health = 100;
       this.level = 1;
-      this.attack = 0;
-      this.defence = 0;
+     
     }
   }
