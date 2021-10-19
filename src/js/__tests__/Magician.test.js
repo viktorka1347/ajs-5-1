@@ -6,8 +6,8 @@ test('Должен создаваться объект класса Magician с 
     type: 'Magician',
     health: 100,
     level: 1,
-    attack: 10,
-    defence: 40,
+    attack: 40,
+    defence: 10,
   };
   expect(new Magician('Вася')).toEqual(magician);
 });
